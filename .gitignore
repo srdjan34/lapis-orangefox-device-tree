@@ -1,0 +1,4 @@
+/prebuilt/stock_vendor_boot.img
+/prebuilt/mitee/
+/BoardConfig.mk.before-usb-fix
+/prebuilt/dtb/lapis.dtb
