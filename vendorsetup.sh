@@ -2,8 +2,6 @@
 
 FDEVICE="lapis"
 
-FOX_DEVICE_TREE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-export FOX_REFERENCE_VENDOR_BOOT_IMAGE="${FOX_DEVICE_TREE_DIR}/prebuilt/stock_vendor_boot.img"
 export FOX_VENDOR_BOOT_RECOVERY=1
 
 fox_get_target_device() {
