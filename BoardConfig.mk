@@ -15,6 +15,7 @@ TARGET_BOOTLOADER_BOARD_NAME := mt6878
 # Boot image format
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_PAGESIZE := 4096
+BOARD_RAMDISK_USE_LZ4 := true
 BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # Kernel
@@ -28,6 +29,9 @@ BOARD_PREBUILT_DTBIMAGE_DIR := device/xiaomi/lapis/prebuilt/dtb
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
+
+# HyperOS mounts its vendor partition separately from system.
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery filesystem table
 TARGET_RECOVERY_FSTAB := device/xiaomi/lapis/recovery.fstab
