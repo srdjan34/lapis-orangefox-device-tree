@@ -30,6 +30,9 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := 67108864
 
+# HyperOS mounts its vendor partition separately from system.
+TARGET_COPY_OUT_VENDOR := vendor
+
 # Recovery filesystem table
 TARGET_RECOVERY_FSTAB := device/xiaomi/lapis/recovery.fstab
 BOARD_VENDOR_SEPOLICY_DIRS += device/xiaomi/lapis/sepolicy
