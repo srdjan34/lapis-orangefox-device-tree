@@ -2,8 +2,6 @@
 
 FDEVICE="lapis"
 
-export FOX_VENDOR_BOOT_RECOVERY=1
-
 fox_get_target_device() {
     local chkdev
     chkdev=$(echo "$BASH_SOURCE" | grep -w "$FDEVICE")
@@ -18,6 +16,8 @@ fi
 
 if [ "$1" = "$FDEVICE" ] || [ "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
     export FOX_AB_DEVICE=1
+    export FOX_VENDOR_BOOT_RECOVERY=1
+    export FOX_USE_UPDATED_MAGISKBOOT=1
     export FOX_USE_BASH_SHELL=1
     export FOX_USE_SED_BINARY=1
     export FOX_USE_TAR_BINARY=1
